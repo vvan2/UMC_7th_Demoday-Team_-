@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/orderDetailTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="주문 상세내역"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_order_list"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orderDetailTitleTv">
+
+                <TextView
+                    android:id="@+id/orderDateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="@color/transparent"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="2025. 1. 1 결제건"
+                    android:textColor="@color/Gray2"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="20dp"
+                    android:background="@color/Gray7"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:overScrollMode="never"
+                    android:id="@+id/orderItemsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="@color/transparent"/>
+
+                <TextView
+                    android:id="@+id/paymentInfoTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="결제 정보"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderItemsRv" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="상품 가격"
+                            android:textColor="#666666" />
+
+                        <TextView
+                            android:id="@+id/productPriceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="32,000원" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="배송비"
+                            android:textColor="#666666" />
+
+                        <TextView
+                            android:id="@+id/deliveryFeeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0원" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="18dp"
+                        android:background="@color/Gray7"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="카카오페이"
+                            android:textColor="#666666" />
+
+                        <TextView
+                            android:id="@+id/kakaoPayTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="32,000원" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="총 결제금액"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/totalPriceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="32,000원"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_order_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="18dp"
+                android:text="배송지"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/pretendard_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_order_list"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        android:id="@+id/recipientNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="김태현"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/editDeliveryBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="@color/Primary_Orange1"
+                        android:layout_marginEnd="20dp"
+                        android:padding="1dp"
+                        android:text="변경"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/pretendard_semibold"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/Gray7"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/addressDetailAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="[00000]"
+                    android:textColor="@color/Gray1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recipientNameTv" />
+
+                <TextView
+                    android:id="@+id/addressDetailTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="서울시 송파구 송파동 송파아파트 101동 101호"
+                    android:textColor="@color/Gray1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recipientNameTv" />
+
+                <TextView
+                    android:id="@+id/phoneTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="14dp"
+                    android:text="010-1234-5678"
+                    android:textColor="@color/Gray1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/deliveryMemoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="문 앞 (1234)"
+                    android:textColor="@color/Gray1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/deliveryNotesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:padding="6dp"
+                android:text="*배송지 변경은 배송 출발 전 식단만 가능합니다."
+                android:textColor="@color/Gray1"
+                android:textSize="13sp"
+                android:fontFamily="@font/pretendard_regular"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

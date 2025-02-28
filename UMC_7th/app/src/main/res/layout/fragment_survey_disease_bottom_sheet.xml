@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="405dp"
+    android:layout_height="460dp"
+    android:background="@drawable/survey_bg_bottom_sheet"
+    tools:context=".Survey.SurveyAllergyBottomSheetFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/disease_diabetes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="당뇨"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/disease_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="고혈압"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/disease_diabetes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/disease_cancer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="암"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/disease_high"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/disease_digestive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="기타 소화기관 지병"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/disease_cancer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#CDCDCD"
+        android:text="다음"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toEndOf="@+id/previous_button"
+        app:layout_constraintTop_toBottomOf="@+id/disease_cancer"/>
+
+    <Button
+        android:id="@+id/previous_button"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#CDCDCD"
+        android:text="이전"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disease_cancer" />
+
+    <ImageButton
+        android:id="@+id/survey_x_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="닫기 버튼"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/surveyx" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

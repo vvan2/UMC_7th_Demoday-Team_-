@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 식단 이미지 -->
+        <ImageView
+            android:id="@+id/img_sample"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_sample"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        <LinearLayout
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/grid_margin"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/img_sample">
+
+            <!-- 제목 -->
+            <TextView
+                android:id="@+id/tv_recipe_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diet_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/img_sample"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/pretendard_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diet_sub_title"
+                    android:textSize="14sp"
+                    android:textColor="@color/Gray4"
+                    android:fontFamily="@font/pretendard_medium"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/bt_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:backgroundTint="@color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bt_question" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/bt_diet_complete"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:backgroundTint="@color/Gray7"
+                    android:text="@string/diet_complete"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:paddingVertical="1dp"
+                    android:paddingHorizontal="1dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:dividerColor="@color/Gray8"
+            android:layout_marginTop="30dp">
+
+        </com.google.android.material.divider.MaterialDivider>
+
+        <!-- 식단 상세 내용 -->
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:id="@+id/ll_diet_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/grid_margin"
+            app:layout_constraintTop_toBottomOf="@id/divider_line"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diet_price"
+                    android:fontFamily="@font/pretendard_bold"
+                    app:layout_constraintTop_toBottomOf="@id/divider_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray3"
+                    android:text="@string/diet_price_contents"
+                    android:textSize="16sp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/pretendard_medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diet_calories"
+                    app:layout_constraintTop_toBottomOf="@id/divider_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Gray3"
+                    android:text="@string/diet_calories_contents"
+                    android:textSize="16sp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/pretendard_medium"/>
+            </LinearLayout>
+
+            <!-- 칼로리 정보 -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_nutrition"
+                android:columnCount="3">
+
+                <!-- Left Text: Nutrient Name -->
+                <TextView
+                    android:id="@+id/textNutrientName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="30dp"
+                    android:text="@string/ingredients"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Center Divider -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:layout_gravity="center" />
+
+                <!-- Right Text: Nutrient Value -->
+                <TextView
+                    android:id="@+id/textNutrientValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="시세"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </GridLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/recyclerNutrition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/Primary_Orange1"
+                android:layout_gravity="fill_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/recyclerNutrition"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/text_level_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diet_level"
+                android:textSize="20sp"
+                android:fontFamily="@font/pretendard_bold"
+                app:layout_constraintTop_toBottomOf="@id/recyclerNutrition"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="2"
+                android:stepSize="1"
+                android:layout_marginTop="8dp"
+                style="@style/CustomRatingBar"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/text_ingredients_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diet_ingredients"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/pretendard_bold"
+                    app:layout_constraintTop_toBottomOf="@id/text_level_title"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1인 기준"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textColor="@color/Gray3"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray4"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diet_recipe"
+                android:textSize="20sp"
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/text_ingredients_title"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/tv_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray4"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

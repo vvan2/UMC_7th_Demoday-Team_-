@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loginConstraintLayout"
+
+        >
+
+        <!-- Logo -->
+
+        <!-- Title -->
+
+        <!-- Email Input -->
+
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="204dp"
+            android:layout_marginTop="140dp"
+            android:src="@drawable/ic_union2_login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:textStyle="bold"
+            android:text="나만의 AI 영양사"
+            android:textColor="@color/Primary_Orange1"
+            app:layout_constraintBottom_toTopOf="@+id/emailLoginInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginTitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jalnan_2"
+            android:text="이거먹자"
+            android:textColor="@color/Primary_Orange1"
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:hintTextColor="@color/Primary_Orange1"
+            app:helperTextTextColor="@color/Primary_Orange1"
+            android:backgroundTint="@color/Primary_Orange1"
+            android:id="@+id/emailLoginInputLayout"
+            android:layout_width="0dp"
+            android:textColorHint="@color/Gray7"
+            android:layout_height="wrap_content"
+            android:hint="이메일을 입력해주세요"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginTitle"
+            android:layout_marginHorizontal="24dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="@dimen/radius_button"
+            app:boxCornerRadiusTopEnd="@dimen/radius_button"
+            app:boxCornerRadiusBottomStart="@dimen/radius_button"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_button"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/Gray8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailLoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textCursorDrawable="@null"
+                android:drawableTint="@color/Primary_Orange1"
+                android:foregroundTint="@color/Primary_Orange1"
+                android:background="@drawable/main_button_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:hintTextColor="@color/Primary_Orange1"
+            android:backgroundTint="@color/Primary_Orange1"
+            android:id="@+id/passwordLoginInputLayout"
+            android:layout_width="0dp"
+            android:textColorHint="@color/Gray7"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력해주세요"
+            android:layout_marginTop="@dimen/spacing_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailLoginInputLayout"
+            android:layout_marginHorizontal="24dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="@dimen/radius_button"
+            app:boxCornerRadiusTopEnd="@dimen/radius_button"
+            app:boxCornerRadiusBottomStart="@dimen/radius_button"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_button"
+            app:boxStrokeColor="@color/Gray7"
+            app:boxBackgroundColor="@color/Gray8"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordLoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
+                android:drawableTint="@color/Primary_Orange1"
+                android:foregroundTint="@color/Primary_Orange1"
+                android:inputType="textPassword"
+                android:background="@drawable/main_button_color"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/signinvisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_eye_visible"
+            app:layout_constraintEnd_toEndOf="@+id/passwordLoginInputLayout"
+            app:layout_constraintTop_toTopOf="@+id/passwordLoginInputLayout" />
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView18"-->
+<!--            android:layout_width="14sp"-->
+<!--            android:layout_height="14sp"-->
+<!--            android:layout_marginStart="300dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:src="@drawable/auto_login"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/passwordLoginInputLayout" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="2sp"-->
+<!--            android:layout_marginTop="6sp"-->
+<!--            android:text="자동 로그인"-->
+<!--            android:textColor="@color/Gray4"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/imageView18"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/passwordLoginInputLayout" />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:backgroundTint="@color/Secondary_Orange2_Light"
+            android:text="회원가입"
+            android:textColor="@color/Primary_Orange1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/Gray6"
+            android:text="로그인"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordLoginInputLayout" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:gravity="center"
+            android:text="소셜 로그인"
+            android:textColor="@color/Gray5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="100dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="120dp"
+            android:background="@color/Gray8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+
+            <ImageView
+                android:id="@+id/kakaologin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/img_kakao_btn" />
+
+            <ImageView
+                android:id="@+id/naverlogin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/img_naver_btn" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <WebView
+        android:id="@+id/naverWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:elevation="10dp"/>
+    <WebView
+        android:id="@+id/kakaoWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

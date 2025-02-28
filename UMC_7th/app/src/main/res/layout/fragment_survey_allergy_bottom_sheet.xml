@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="405dp"
+    android:layout_height="485dp"
+    android:background="@drawable/survey_bg_bottom_sheet"
+    tools:context=".Survey.SurveyAllergyBottomSheetFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_grain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="곡물류 (밀, 보리 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="육류 (돼지, 소 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/allergy_grain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_dairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="유제품 (우유, 치즈 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_grain"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_seafood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="해산물 및 어류 (새우, 게 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/allergy_dairy"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_meat"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_nuts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="견과류 (땅콩, 아몬드 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_dairy"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_fruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="채소류 (토마토, 감자 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/allergy_nuts"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_seafood"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_vegetable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="과일류(파인애플, 사과 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_nuts"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allergy_herbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8F8F8"
+        android:text="향신료 및 조미료 (마늘, 생강 등)"
+        android:textColor="#B9B9B9"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_vegetable"
+        app:strokeColor="#F8F8F8"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#CDCDCD"
+        android:text="다음"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/previous_button"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_herbs" />
+
+    <Button
+        android:id="@+id/previous_button"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#CDCDCD"
+        android:text="이전"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allergy_herbs" />
+
+    <ImageButton
+        android:id="@+id/survey_x_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="닫기 버튼"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/surveyx" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

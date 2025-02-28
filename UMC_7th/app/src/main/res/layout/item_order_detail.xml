@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="20dp">
+
+    <!-- 배송 날짜 및 상태 -->
+    <TextView
+        android:id="@+id/tvDeliveryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/22 (수) 배송 완료"
+        android:textColor="@color/Primary_Orange1"
+        android:fontFamily="@font/pretendard_bold"
+        android:textSize="12sp"/>
+
+    <!-- 배송 장소 -->
+    <TextView
+        android:id="@+id/tvDeliveryLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="배송장소 (아침, 점심)"
+        android:textColor="@color/Gray2"
+        android:fontFamily="@font/pretendard_bold"
+        android:textSize="12sp"/>
+
+    <!-- 메뉴 상세 정보 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- 메뉴 이름 -->
+            <TextView
+                android:id="@+id/tvMenuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="다이어트 구독 식단"
+                android:textColor="@color/Gray2"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvMenuBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아침 - 하루 시작 포케 (420kcal)"
+                android:textColor="@color/Gray4"
+                android:fontFamily="@font/pretendard_medium"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tvMenuLunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="점심 - 고등어 조림 한상/비조림 (830kcal)"
+                android:textColor="@color/Gray4"
+                android:fontFamily="@font/pretendard_medium"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            app:cardCornerRadius="10dp"
+            android:outlineProvider="none">
+
+            <ImageView
+                android:id="@+id/ivFoodImage"
+                android:src="@drawable/img_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <!-- 버튼 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/btnDeliveryCheck"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/selector_button_delivery"
+            android:fontFamily="@font/pretendard_semibold"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:text="배송조회"
+            android:textColor="#FF7A45"/>
+
+
+        <TextView
+            android:id="@+id/btnReview"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/selector_button_review"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="리뷰 등록"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

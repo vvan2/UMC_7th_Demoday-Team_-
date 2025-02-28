@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true"
+        android:drawable="@drawable/ic_star_filled" />  <!-- 즐겨찾기 활성화 상태 -->
+    <item android:drawable="@drawable/ic_star_filled" />  <!-- 즐겨찾기 비활성화 상태 -->
+</selector>

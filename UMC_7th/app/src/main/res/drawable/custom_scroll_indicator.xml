@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 🔹 전체 ProgressBar의 회색 배경 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F0F0F0"/>  <!-- 연한 회색 배경 -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+    <!-- 🔸 스크롤된 부분을 주황색으로 표시 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="#FF7300"/>  <!-- 주황색 진행 바 -->
+                <corners android:radius="10dp"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:background="@drawable/bg_dialog"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="25dp"
+    android:paddingBottom="15dp"
+    android:backgroundTint="@color/Gray8">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="제철"
+                android:textColor="@color/Primary_Orange1"
+                android:textSize="11sp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="현재 계절에 가장 맛있고 신선한 식재료"
+                android:textColor="@color/Gray5"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="식량작물"
+                android:textColor="@color/Primary_Orange1"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="식으로 소비되는 곡물류 (쌀, 콩, 고구마, 감자 등)"
+                android:textColor="@color/Gray5"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="특용작물"
+                android:textColor="@color/Primary_Orange1"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="약용, 기호식품, 공업 원료 등 특정 용도로 재배되는 농산물\n(참깨, 땅콩, 팽이버섯 등))"
+                android:textColor="@color/Gray5"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="과일류"
+                android:textColor="@color/Primary_Orange1"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="신선한 과일 및 견과류 (사과, 배, 바나나, 오렌지 등)"
+                android:textColor="@color/Gray5"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="수산물"
+                android:textColor="@color/Primary_Orange1"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="바다나 강에서 나는 생선 및 해산물 (고등어, 오징어, 새우 등)"
+                android:textColor="@color/Gray5"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="축산물"
+                android:textColor="@color/Primary_Orange1"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="고기와 유제품 (소, 돼지, 닭, 우유 등)"
+                android:textColor="@color/Gray5"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="식품"
+                android:textColor="@color/Primary_Orange1"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="가공된 식재료 및 조미료 (두부, 간장, 고추장, 즉석밥 등)"
+                android:textColor="@color/Gray5"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

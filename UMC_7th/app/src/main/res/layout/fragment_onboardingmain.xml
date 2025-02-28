@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Onboarding.OnboardingMainFragment">
+
+    <!-- 첫 번째 이미지 -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24.51dp"
+        android:layout_height="21.26dp"
+        app:srcCompat="@drawable/cap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="197.12dp"
+        android:layout_marginTop="128.72dp" />
+
+    <!-- 두 번째 이미지 -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="134.1dp"
+        android:layout_height="32.23dp"
+        android:layout_marginTop="151.63dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/name" />
+
+    <!-- 세 번째 이미지 -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="83.44dp"
+        android:layout_height="83.44dp"
+        app:srcCompat="@drawable/plus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-9dp"
+        android:layout_marginTop="426.74dp" />
+
+    <!-- 네 번째 이미지 -->
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="73.38dp"
+        android:layout_height="71.82dp"
+        app:srcCompat="@drawable/square"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="273.05dp"
+        android:layout_marginTop="357.68dp" />
+
+    <!-- 다섯 번째 이미지 -->
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="71.66dp"
+        android:layout_height="71.66dp"
+        app:srcCompat="@drawable/star"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="84.09dp"
+        android:layout_marginTop="313.77dp" />
+
+    <!-- 여섯 번째 이미지 -->
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="81.43dp"
+        android:layout_height="81.43dp"
+        app:srcCompat="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="338.09dp"
+        android:layout_marginTop="477.42dp" />
+
+    <!-- 중앙 이미지 -->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="173.16dp"
+        android:layout_height="173.76dp"
+        android:layout_marginTop="324.12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/whitecap" />
+
+    <!-- 상단 텍스트 -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="201.26dp"
+        android:text="내 손 안의 나만의 AI 영양사"
+        android:textColor="#FF7300"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="325.56dp"
+        android:layout_height="49.64dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#FF7300"
+        android:text="시작"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="662.57dp"
+        android:text="이미 계정이 있으신가요?"
+        android:textColor="#7B7B7B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="677.97dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="0dp"
+        android:text="로그인"
+        android:textColor="#FF7300"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

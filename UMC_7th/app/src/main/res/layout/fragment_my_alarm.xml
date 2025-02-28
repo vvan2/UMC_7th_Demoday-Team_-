@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/topcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sub_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/back2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="알림 설정"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/spacing_32"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:fontFamily="@font/pretendard_semibold"
+        android:textStyle="bold"
+        android:textColor="@color/Gray3"
+        android:text="푸시/문자/이메일"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_32"
+        android:layout_marginRight="@dimen/spacing_12"
+        android:src="@drawable/info_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="30sp"
+        android:background="@color/Gray8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewin" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/spacing_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/Gray3"
+            android:text="기기알림설정"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/Gray4"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:text="기기 알림을 켜시면 식단 알림, AI 건강 진단 등 소식을
+            받아보실 수 있어요"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34sp"
+        android:layout_marginRight="@dimen/spacing_12"
+        android:src="@drawable/info_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:layout_marginRight="@dimen/spacing_16"
+        android:background="@color/Gray7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1" />
+
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/spacing_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textStyle="bold"
+            android:textColor="@color/Gray3"
+            android:text="식단 알림"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:textColor="@color/Gray4"
+            android:text="식시 시간과 새로운 식단이 안성되면 알림으로 알려드려요."/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:layout_marginRight="@dimen/spacing_16"
+        android:background="@color/Gray7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear2" />
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/spacing_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/Gray3"
+            android:text="구독 알림"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:textColor="@color/Gray4"
+            android:text="식시 시간과 새로운 식단이 안성되면 알림으로 알려드려요."/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:layout_marginRight="@dimen/spacing_16"
+        android:background="@color/Gray7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear3" />
+
+
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/spacing_32"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginLeft="@dimen/spacing_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView47">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:textStyle="bold"
+            android:textColor="@color/Gray3"
+            android:text="AI 진단결과 알림"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:textColor="@color/Gray4"
+            android:text="사용자 입력 식단에 따른 AI 진단 결과를 알려드려요."/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:layout_marginRight="@dimen/spacing_16"
+        android:background="@color/Gray7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear4" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/white"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linear2" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/white"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linear3" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/white"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linear4" />
+
+
+    <LinearLayout
+        android:id="@+id/linear5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/spacing_32"
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:textStyle="bold"
+            android:textColor="@color/Gray3"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="문자/이메일"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:textColor="@color/Gray4"
+            android:text="다양한 혜택과 이벤트 알림"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginRight="@dimen/spacing_32"
+        android:layout_marginLeft="@dimen/spacing_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear5">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:textStyle="bold"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/Gray4"
+            android:text="문자"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:textColor="@color/Gray4"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="이메일"/>
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:thumbTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/linear5" />
+
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:thumbTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/switch4" />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

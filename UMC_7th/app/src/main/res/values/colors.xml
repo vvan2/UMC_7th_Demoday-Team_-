@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- black&white -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+
+    <!-- Main -->
+    <color name="Primary_Orange1">#FF7300</color>
+    <color name="Primary_Orange2">#FF852D</color>
+    <color name="Primary_Orange3">#FF9838</color>
+    <color name="Primary_Orange1_Dark">#FF7300</color>
+    <color name="Primary_Orange2_Dark">#E66800</color>
+    <color name="Primary_Orange3_Dark">#BF5600</color>
+    <color name="Primary_Orange4_Dark">#994500</color>
+    <color name="Gradient_Start_Dark">#592800</color>
+    <color name="Gradient_End_Dark">#733400</color>
+    <color name="Secondary_Orange1_Light">#FFD4B0</color>
+    <color name="Secondary_Orange2_Light">#FFEAD9</color>
+    <color name="Secondary_Orange3_Light">#FFF1E6</color>
+
+    <!--Gray-->
+    <color name="Gray1">#484848</color>
+    <color name="Gray2">#5C5C5C</color>
+    <color name="Gray3">#7B7B7B</color>
+    <color name="Gray4">#9A9A9A</color>
+    <color name="Gray5">#A4A4A4</color>
+    <color name="Gray6">#B9B9B9</color>
+    <color name="Gray7">#CDCDCD</color>
+    <color name="Gray8">#F0F0F0</color>
+    <color name="Gray9">#F8F8F8</color>
+    <color name="Gray10">#FAFAFA</color>
+
+    <!-- Main_Linear_Gradient -->
+    <!-- 형태는 res/drawable/gradient_background.xml 로 지정해놨습니다. -->
+    <color name="Gradient_Start">#FF7300</color>">
+    <color name="Gradient_End">#FDA756</color>">
+
+    <!-- 경고문구 색상-->
+    <color name="Invalid">#EB5757</color>
+    <color name="Valid">#3070F8</color>
+
+    <!-- 결제 색상-->
+    <color name="nacer_pay">#03C75A</color>
+
+    <!-- 그래프 색상-->
+    <color name="Blue">#FF1F78B4</color>
+
+    <color name="card_sub">#37B529</color>
+
+    <color name="semi_transparent">#80000000</color>
+
+    <!-- Calendar Arrow Colors -->
+    <color name="arrow_default_color">@color/white</color>
+    <color name="arrow_pressed_color">@color/Primary_Orange1</color>
+
+</resources>

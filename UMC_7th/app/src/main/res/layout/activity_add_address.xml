@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".AddAddressActivity">
+
+    <!-- 상단 고정 툴바 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/backimage"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/subsctibecircle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- 뒤로 가기 버튼 -->
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/previous"
+                android:contentDescription="뒤로 가기"
+                android:background="@null"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- 중앙 TextView ("주소록 관리") -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주소록 관리"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="22dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- 스크롤 가능한 NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- 기존 배송지 목록 (RecyclerView) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_address"/>
+
+            <!-- 신규 배송지 입력 필드 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#F8F8F8"
+                app:layout_constraintTop_toBottomOf="@id/recyclerView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- 이름 -->
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="이름"
+                        android:textSize="14sp"
+                        android:textColorHint="#9A9A9A"
+                        android:background="@null"
+                        android:padding="10dp"/>
+
+                    <!-- 밑줄  -->
+                    <View
+                        android:id="@+id/view_divide"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#CDCDCD"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/et_name"
+                        android:layout_marginTop="6dp"/>
+
+                    <!-- 우편번호 입력 -->
+                    <EditText
+                        android:id="@+id/et_postcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="[우편번호]"
+                        android:textSize="14sp"
+                        android:textColorHint="#9A9A9A"
+                        android:background="@null"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/et_name"/>
+
+                    <!-- 주소 입력 -->
+                    <EditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="상세주소를 입력해주세요."
+                        android:textSize="14sp"
+                        android:textColorHint="#9A9A9A"
+                        android:background="@null"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/et_postcode"/>
+
+                    <!-- 전화번호 입력 -->
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="전화번호를 입력해주세요."
+                        android:textSize="14sp"
+                        android:textColorHint="#9A9A9A"
+                        android:background="@null"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/et_address"/>
+
+                    <!-- 배송 메모 입력 -->
+                    <EditText
+                        android:id="@+id/et_memo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="기타 메모를 입력해주세요."
+                        android:textSize="14sp"
+                        android:textColorHint="#9A9A9A"
+                        android:background="@null"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/et_phone"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 추가 완료 버튼 -->
+            <Button
+                android:id="@+id/btn_complete"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="추가 완료"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#D3D3D3"
+                android:layout_marginTop="76dp"
+                android:layout_marginHorizontal="56dp"
+                app:layout_constraintTop_toBottomOf="@id/add_address_layout"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

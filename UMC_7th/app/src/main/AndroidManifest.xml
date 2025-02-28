@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Internet, network_security 추가-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 앨범 저장소 추가-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+
+
+
+
+    <application
+        android:name=".model.MyApplication"
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UMC"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+
+
+        <activity
+            android:name="com.navercorp.nid.oauth.NidOAuthBridgeActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="false"
+            tools:replace="android:theme" />
+
+
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="네이티브 앱 키" />
+
+
+        <activity
+            android:name=".Splash.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity
+            android:name=".Signin.LoginActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Onboarding.OnboardingMainActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Main.MainActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--            </intent-filter>  -->
+        </activity>
+
+<!--        <activity android:name="com.example.pricefruit.FruitPriceActivity"-->
+<!--            android:exported="true"/>-->
+
+<!--        &lt;!&ndash; DietActivity 등록 &ndash;&gt;-->
+        <!-- activity로 만드셔서 전부 등록했습니다-->
+
+    </application>
+
+</manifest>

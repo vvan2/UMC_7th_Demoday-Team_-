@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/transparent"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/ll_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/deliveryDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/22 (수) 식단 - 배송 완료"
+            android:textColor="@color/Primary_Orange1"
+            android:textSize="15sp"
+            android:fontFamily="@font/pretendard_bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 아침 메뉴 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/breakfastTitleTv"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="아침"
+                android:textSize="16sp"
+                android:fontFamily="@font/pretendard_bold"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/breakfastMenuTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="하루 시작 포케 - 2인분"
+                    android:textColor="@color/Gray2"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/breakfastKcalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="420Kcal"
+                    android:textColor="#888888"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/breakfastPriceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20,000원"
+                android:textColor="@color/Gray2"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- 점심 메뉴 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/lunchTitleTv"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="점심"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lunchMenuTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="고등어 조림 한상 - 1인분"
+                    android:textColor="@color/Gray2"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/lunchKcalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="840Kcal"
+                    android:textColor="#888888"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lunchPriceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray2"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="12,000원"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- 저녁 메뉴 -->
+        <LinearLayout
+            android:id="@+id/ll_dinner_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/dinnerTitleTv"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="저녁"
+                android:fontFamily="@font/pretendard_bold"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dinnerMenuTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="고등어 조림 한상 - 1인분"
+                    android:textColor="@color/Gray2"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/dinnerKcalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="840Kcal"
+                    android:textColor="#888888"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dinnerPriceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Gray2"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="12,000원"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/Gray7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_order_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_20">
+
+        <TextView
+            android:fontFamily="@font/pretendard_bold"
+            android:id="@+id/tv_add_manual_title_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI 건강 진단"
+            android:textSize="20sp"
+            android:textColor="@color/Primary_Orange1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:fontFamily="@font/pretendard_bold"
+            android:id="@+id/tv_add_manual_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="을 위해"
+            android:textSize="20sp"
+            android:textColor="@color/Gray1"
+            app:layout_constraintStart_toEndOf="@id/tv_add_manual_title_1"
+            app:layout_constraintTop_toTopOf="@id/tv_add_manual_title_1"/>
+
+        <TextView
+            android:fontFamily="@font/pretendard_bold"
+            android:id="@+id/tv_add_manual_title_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="식사한 식단을 등록해주세요!"
+            android:textSize="20sp"
+            android:textColor="@color/Gray1"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_manual_title_1"
+            app:layout_constraintStart_toStartOf="@id/tv_add_manual_title_1"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/bt_add_confirm"
+            android:fontFamily="@font/pretendard_bold"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:text="등록 내역 확인"
+            android:backgroundTint="@color/Primary_Orange1"
+            android:textSize="12sp"
+            android:padding="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_manual_title_3"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/tv_add_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_add_confirm">
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="먹은 식단의 "
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날짜"
+                android:textSize="18sp"
+                android:textColor="@color/Primary_Orange1"/>
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="를 선택해 주세요"
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/bt_add_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_date"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/bt_month"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:textSize="12sp"
+                android:padding="1dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:backgroundTint="@color/Gray4"/>
+
+            <Spinner
+                android:id="@+id/spinner_date"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bt_day_select"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/tv_add_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_add_date">
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="먹은 식단의 "
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textSize="18sp"
+                android:textColor="@color/Primary_Orange1"/>
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="를 선택해 주세요"
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_add_time"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_time"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/bt_morning"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:text="@string/breakfast"
+                android:textSize="12sp"
+                android:padding="1dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:backgroundTint="@color/Gray7"/>
+
+            <Button
+                android:id="@+id/bt_lunch"
+                android:layout_marginStart="5dp"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:text="@string/lunch"
+                android:textSize="12sp"
+                android:padding="1dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:backgroundTint="@color/Gray7"/>
+
+            <Button
+                android:id="@+id/bt_dinner"
+                android:layout_marginStart="5dp"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:text="@string/dinner"
+                android:textSize="12sp"
+                android:padding="1dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:backgroundTint="@color/Gray7"/>
+
+            <Button
+                android:id="@+id/bt_snack"
+                android:layout_marginStart="5dp"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:text="야식"
+                android:textSize="12sp"
+                android:padding="1dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:backgroundTint="@color/Gray7"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/tv_add_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_add_time">
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="먹은 식단의 "
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="음식"
+                android:textSize="18sp"
+                android:textColor="@color/Primary_Orange1"/>
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="을 작성해 주세요"
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+        </LinearLayout>
+
+        <!-- 음식 입력 -->
+        <LinearLayout
+            android:id="@+id/et_add_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_food"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_textfield"
+                android:fontFamily="@font/pretendard_semibold"
+                android:hint="입력해 주세요 ex) 제육볶음, 밥 1공기"
+                android:padding="15dp"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_textfield"
+                android:fontFamily="@font/pretendard_semibold"
+                android:hint="입력해 주세요 ex) 제육볶음, 밥 1공기"
+                android:padding="15dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:fontFamily="@font/pretendard_bold"
+            android:id="@+id/bt_add_food_text"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:padding="1dp"
+            android:text="추가"
+            android:textSize="12sp"
+            android:backgroundTint="@color/Gray7"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/et_add_food"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_add_calorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_add_food_text">
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="먹은 식단의 "
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="칼로리"
+                android:textSize="18sp"
+                android:textColor="@color/Primary_Orange1"/>
+
+            <!-- 날짜 선택 -->
+            <TextView
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="을 작성해 주세요"
+                android:textSize="18sp"
+                android:textColor="@color/Gray2"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_add_calorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="입력해 주세요 ex) 1300 (단위 제외)"
+            android:backgroundTint="@color/Gray8"
+            android:background="@drawable/bg_textfield"
+            android:fontFamily="@font/pretendard_semibold"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_calorie"/>
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:text="저장"
+            android:textSize="16sp"
+            android:padding="1dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:backgroundTint="@color/Gray7"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_add_calorie"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

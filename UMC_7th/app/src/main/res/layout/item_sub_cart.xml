@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibt_check_cart"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_uncheck" />
+
+        <TextView
+            android:id="@+id/tv_cart_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textSize="14sp"
+            android:textColor="@color/Gray2"
+            android:text="01.01" />
+
+        <TextView
+            android:id="@+id/tv_cart_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textSize="14sp"
+            android:textColor="@color/Gray2"
+            android:text="아침" />
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:id="@+id/tv_menu_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="콩나물 김치찌개 외 3개"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/Gray3"
+            android:textSize="12sp"/>
+
+        <ImageButton
+            android:id="@+id/ibt_minus"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_minus" />
+
+        <TextView
+            android:id="@+id/tv_serving_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/Gray3"
+            android:text="%d"
+            android:textSize="11dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/Gray3"
+            android:text="인분"
+            android:textSize="11dp" />
+
+        <ImageButton
+            android:id="@+id/ibt_plus"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_plus" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

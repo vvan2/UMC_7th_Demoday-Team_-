@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bg_textfield"
+    android:fontFamily="@font/pretendard_semibold"
+    android:hint="입력해 주세요 ex) 제육볶음, 밥 1공기"
+    android:padding="15dp"
+    android:textSize="12sp" />
