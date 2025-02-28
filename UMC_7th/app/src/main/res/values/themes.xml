@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 기본 애플리케이션 테마 -->
+    <style name="Base.Theme.UMC" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- 상태 바의 색상을 하얀색으로 설정 -->
+        <item name="android:statusBarColor">@color/white</item>
+        <!-- 폰트 패딩을 제거하여 텍스트가 정확한 크기로 표시되도록 설정 -->
+        <item name="android:includeFontPadding">false</item>
+        <!-- 앱의 기본 배경색을 흰색으로 설정 -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!-- Base.Theme.UMC를 상속받는 실제 사용될 테마 -->
+    <style name="Theme.UMC" parent="Base.Theme.UMC">
+        <!-- 상단 상태바 설정 -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- 하단 네비게이션 바 설정 -->
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- 스플래시 스크린(시작 화면) 테마 -->
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/Primary_Orange1</item>
+        <!-- 스플래시 스크린 이후 전환될 테마 지정 -->
+        <item name="postSplashScreenTheme">@style/Theme.UMC</item>
+    </style>
+
+    <!-- 식단 완료 버튼 스타일 -->
+    <style name="Widget.App.Button.Diet" parent="Widget.Material3.Button">
+        <item name="materialThemeOverlay">@null</item>
+        <item name="android:background">@drawable/bt_selector_diet_complete_button</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+</resources>

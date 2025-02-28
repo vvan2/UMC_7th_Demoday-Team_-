@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop Shadow Stack for Level 2 (y:2, blur:6) -->
+    <item>
+        <shape>
+            <padding android:bottom="2dp" android:left="0dp" android:right="0dp" android:top="2dp" />
+            <solid android:color="#15D4D8DC" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:bottom="2dp" android:left="0dp" android:right="0dp" android:top="1dp" />
+            <solid android:color="#12D4D8DC" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:bottom="1dp" android:left="0dp" android:right="0dp" android:top="1dp" />
+            <solid android:color="#0FD4D8DC" />
+        </shape>
+    </item>
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="@android:color/white" />
+            <corners android:radius="@dimen/radius_box"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal"
+    android:columnCount="3">
+
+    <!-- Left Text: Nutrient Name -->
+    <TextView
+        android:paddingStart="30dp"
+        android:id="@+id/textNutrientName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="식재료"
+        android:textSize="14sp"
+        android:gravity="start"
+        android:layout_gravity="center_vertical"/>
+
+    <!-- Center Divider -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/Primary_Orange1"
+        android:layout_gravity="fill_vertical" />
+
+    <!-- Right Text: Nutrient Value -->
+    <TextView
+        android:id="@+id/textNutrientValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:text="칼로리"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/Primary_Orange1"
+        android:layout_gravity="center_vertical"/>
+
+    <!-- Horizontal Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Primary_Orange1"
+        android:layout_columnSpan="3"
+        android:layout_gravity="fill_horizontal" />
+</GridLayout>

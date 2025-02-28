@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- dimens.xml에서 정의한 반지름 값을 사용 -->
+    <corners android:radius="5dp" />
+    <solid android:color="@color/white" />
+    <stroke
+        android:width="2dp"
+        android:color="@color/Gray6"/>
+</shape>

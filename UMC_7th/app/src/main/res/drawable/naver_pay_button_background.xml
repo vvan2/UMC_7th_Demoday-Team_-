@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 버튼이 선택되었을 때 -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#1EC800"/> <!-- 네이버 브랜드 초록색 -->
+            <corners android:radius="4dp"/>
+        </shape>
+    </item>
+
+    <!-- 기본 상태 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/Gray6"/>
+            <corners android:radius="4dp"/>
+        </shape>
+    </item>
+</selector>

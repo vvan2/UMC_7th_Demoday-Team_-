@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 클릭된 상태 -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/Gray7"/>  <!-- 회색 -->
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+    <!-- 활성화된 상태 -->
+    <item android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/Primary_Orange1"/>  <!-- 주황색 -->
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+    <!-- 비활성화된 상태 -->
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/Gray7"/>  <!-- 회색 -->
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+</selector>

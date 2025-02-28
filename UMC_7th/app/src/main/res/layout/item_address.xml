@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#F8F8F8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F8F8F8"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="25dp">
+
+            <!-- 이름  -->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김태현"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#5C5C5C"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="이름"
+                android:text="김태현"
+                android:backgroundTint="@color/transparent"
+                android:padding="1dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#5C5C5C"
+                android:layout_marginTop="13.8dp"
+                android:layout_marginStart="8.6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- 체크 아이콘 -->
+            <ImageButton
+                android:id="@+id/iv_check"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/selector_check_icon"
+                android:contentDescription="체크 아이콘"
+                android:padding="12dp"
+                android:background="@null"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_name"/> <!-- 같은 라인 정렬 -->
+
+
+            <!-- 밑줄  -->
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#CDCDCD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_check"
+                android:layout_marginTop="6dp"/>
+
+            <!-- 우편 -->
+            <TextView
+                android:id="@+id/tv_postcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="[00000]"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="36dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <EditText
+                android:id="@+id/et_postcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="[00000]"
+                android:text="[00000]"
+                android:backgroundTint="@color/transparent"
+                android:padding="1dp"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="8.9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_name"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- 주소 -->
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="서울시 송파구 송파동 송파아파트 101동 101호"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_postcode"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:hint="서울시 송파구 송파동 송파아파트 101동 101호"
+                android:text="서울시 송파구 송파동 송파아파트 101동 101호"
+                android:backgroundTint="@color/transparent"
+                android:padding="0.1dp"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="0.1dp"
+                android:layout_marginStart="9.4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_postcode"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- 전화번호 -->
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="010-1234-5678"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address"/>
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="010-1234-5678"
+                android:text="010-1234-5678"
+                android:backgroundTint="@color/transparent"
+                android:padding="0.1dp"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="9.8dp"
+                android:layout_marginStart="9.4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_address"/>
+
+            <!-- 배송 메모 -->
+            <TextView
+                android:id="@+id/tv_memo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="문 앞 (1234)"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone"/>
+
+            <EditText
+                android:id="@+id/et_memo"
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:hint="문 앞 (1234)"
+                android:text="문 앞 (1234)"
+                android:backgroundTint="@color/transparent"
+                android:padding="1dp"
+                android:textSize="14sp"
+                android:textColor="#9A9A9A"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="8.8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_phone"
+                android:visibility="gone"/>
+
+            <!-- 수정 버튼 -->
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:text="수정"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:padding="1dp"
+                android:backgroundTint="#CDCDCD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

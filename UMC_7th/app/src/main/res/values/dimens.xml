@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Spacing -->
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_32">32dp</dimen>
+    <dimen name="spacing_48">48dp</dimen>
+    <dimen name="spacing_64">64dp</dimen>
+
+    <!-- Grid System -->
+    <dimen name="grid_column_count">6</dimen>  <!-- 6 컬럼 시스템 -->
+    <dimen name="grid_gutter">12dp</dimen>     <!-- 컬럼 간격 -->
+    <dimen name="grid_margin">16dp</dimen>     <!-- 좌우 마진 -->
+
+    <!-- 8 Grid System -->
+    <dimen name="grid_8_column_count">8</dimen>  <!-- 8 컬럼 시스템 -->
+    <dimen name="grid_8_gutter">12dp</dimen>     <!-- 8 그리드 컬럼 간격 -->
+    <dimen name="grid_8_margin">16dp</dimen>     <!-- 8 그리드 마진 -->
+
+    <!-- Rounding -->
+    <dimen name="radius_box">10dp</dimen>
+    <dimen name="radius_button">40dp</dimen>
+
+    <!-- Icon Stroke -->
+    <dimen name="icon_stroke_width">3dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_16">16dp</dimen>
+    <dimen name="icon_size_24">24dp</dimen>
+    <dimen name="icon_size_36">36dp</dimen>
+    <dimen name="icon_size_40">40dp</dimen>
+
+    <!-- Icon Corner Radius -->
+    <dimen name="icon_corner_radius">3dp</dimen>
+
+    <dimen name="padding_horizontal">12dp</dimen>
+    <dimen name="padding_vertical">4dp</dimen>
+</resources>

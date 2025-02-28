@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/subscriptionManageFragment">
+
+    <fragment
+        android:id="@+id/subscriptionManageFragment"
+        android:name="com.example.umc.Subscribe.SubscriptionManageFragment"
+        android:label="구독관리">
+        <action
+            android:id="@+id/action_subscriptionManageFragment_to_subscriptionHistoryFragment"
+            app:destination="@id/subscriptionHistoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subscriptionHistoryFragment"
+        android:name="com.example.umc.Subscribe.SubFragment"
+        android:label="구독내역" />
+
+</navigation>

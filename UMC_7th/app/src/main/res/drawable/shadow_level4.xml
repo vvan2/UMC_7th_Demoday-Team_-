@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop Shadow Stack for Level 4 (y:4, blur:20) -->
+    <item>
+        <shape>
+            <padding android:bottom="4dp" android:left="0dp" android:right="0dp" android:top="4dp" />
+            <solid android:color="#1FB5B9BD" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:bottom="4dp" android:left="0dp" android:right="0dp" android:top="3dp" />
+            <solid android:color="#1AB5B9BD" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:bottom="3dp" android:left="0dp" android:right="0dp" android:top="3dp" />
+            <solid android:color="#15B5B9BD" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:bottom="3dp" android:left="0dp" android:right="0dp" android:top="2dp" />
+            <solid android:color="#12B5B9BD" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:bottom="2dp" android:left="0dp" android:right="0dp" android:top="2dp" />
+            <solid android:color="#0FB5B9BD" />
+        </shape>
+    </item>
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="@android:color/white" />
+            <corners android:radius="@dimen/radius_box"/>
+        </shape>
+    </item>
+</layer-list>
